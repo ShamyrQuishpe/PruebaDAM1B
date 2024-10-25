@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      BIOGRAFÍA 
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +13,100 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>SHAMYR SEBASTIAN QUISHPE CUADRADO</ion-card-title>
+      <ion-card-subtitle>Autor de esta APP</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="content-container">
+        <img src="/assets/images/pruebadam.jpg" alt="foto" class="profile-image">
+        <div class="text-content">
+          <ion-card-title class="profile-title">Nacimiento</ion-card-title>
+          Nací el 26 de enero del 2003 en Quito - Ecuador
+          <ion-datetime value="2003-01-26T16:20:00" min="2003-01-26T16:20:00" max="2003-01-26T16:20:00"></ion-datetime>
+          Para ser exactos un día domingo a las 16:20 P.M. justo como en el calendario :D.
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Estudios</ion-card-title>
+    </ion-card-header>
+    <ion-list [inset]="true">
+      <ion-item>
+        <h2>Unidad Educativa Luciano Andrade Marín</h2>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <h3>B.G.U</h3>
+          <p>Aprendizajes:</p>
+            <p>• Le tome mucho gusto a la música, ahí aprendí a tocar la guitarra</p>
+            <p>• Encontre la pasión por la programación, realizando programas pequeños en mi tiempo libre</p>
+            <p>• Encontre el gusto por la lectura, uno de mis libros favoritos es el Túnel de Ernesto Sábato</p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <h2>ESCUELA POLITÉCNICA NACIONAL</h2>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <h3>DESARROLLADOR DE SOFTWARE</h3>
+          <p>Aprendizajes:</p>
+            <p>• Encontre el gusto por la programación y el desarrollo de aplicaciones</p>
+            <p>• Compartir con amigos y maestros me han llenado de experiencia y sabiduría a lo largo de la carrera</p>
+            <p>• Descubrí mi área de trabajo favorita como lo es "El Análisis de Datos"</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="information-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button (click)="showContent('Telefono: 0999807517')">
+        <ion-icon name="call"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="showContent('Email: shamyrquishpet@gmail.com')">
+        <ion-icon name="mail"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="showContent('Cedula: 1726082929')">
+        <ion-icon name="id-card"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="showContent('Direccion: Quito-Ecuador')">
+        <ion-icon name="pin"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  <ion-card>
+    <ion-card-title>Yo tocando la guitarra eléctrica:</ion-card-title>
+    <ion-button (click)="boton1()">Pulsa Aquí</ion-button>
+  </ion-card>
+  <ion-card>
+    <ion-card-title>Gustos Musicales
+      <ion-icon name="musical-notes-outline">Me gusta mucho el Rock y el Metal</ion-icon>
+    </ion-card-title>
+    <p>Me gusta muhco el rock y el metal, sin embargo, tambien el y el alternativo que lo suelo tocar en el ukelele</p>
+
+  </ion-card>
+
+  <ion-button id="click-trigger">
+    Click para saber un secreto
+    <ion-icon name="chatbubble-outline"></ion-icon>
+  </ion-button>
+<ion-popover trigger="click-trigger" triggerAction="click">
+  <ng-template>
+    <ion-content class="ion-padding">
+      Uno de mis más grandes logros a lo largo de la carrera es que, fui becado durante toda ella :3
+    </ion-content>
+  </ng-template>
+</ion-popover>
+  <ion-progress-bar [value]="progress"></ion-progress-bar>
+
 </ion-content>
