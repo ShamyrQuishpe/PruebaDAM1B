@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Fechas y Datepickers
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,6 +12,26 @@
       <ion-title size="large">Tab 3</ion-title>
     </ion-toolbar>
   </ion-header>
+  <h2>CALCULADORA DE DÍAS</h2>
+  <form id="new-form">
+    <ion-item id="new-input2">
+      <ion-label stacked>
+        Fecha inicial
+      </ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" placeholder="" name="fechaini" [(ngModel)]="fechaini"></ion-datetime>
+    </ion-item>
+    <ion-item id="new-input3">
+      <ion-label stacked>
+        Fecha final
+      </ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" placeholder="" name="fechafin" [(ngModel)]="fechafin"></ion-datetime>
+    </ion-item>                
+  </form>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <div class="resultados">
+    <ion-button color="success" (click)="calcular()">Calcular Días</ion-button>
+    <p>El total de días fue de:</p>
+    <ion-input class="display" [(ngModel)]="display" reandonly></ion-input>
+  </div>
+
 </ion-content>
