@@ -1,0 +1,7 @@
+{
+  "name": "PruebaDAMSQ",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
