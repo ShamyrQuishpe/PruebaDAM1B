@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
+  boton2(){
+    window.open('https://github.com/ShamyrQuishpe/PruebaDAM1B','_blank')
+  }
   constructor() {}
 
 }
