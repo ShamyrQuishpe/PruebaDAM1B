@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Archiveria
+      Calculadora de ecuaciones cuadráticas
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +13,27 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <div class="raiz">
+    <form (ngSubmit)="onSubmit()">
+      <ion-item>
+        <ion-label position="stacked">Valor de a</ion-label>
+        <ion-input type="number" [(ngModel)]="a" name="a" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Valor de b</ion-label>
+        <ion-input type="number" [(ngModel)]="b" name="b" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Valor de c</ion-label>
+        <ion-input type="number" [(ngModel)]="c" name="c" required></ion-input>
+      </ion-item>
+      <ion-button expand="full" type="submit">Calcular Raíces</ion-button>
+    </form>
+  
+    <div *ngIf="result" class="result">
+      <h2>Resultado:</h2>
+      <p>{{ result }}</p>
+    </div>
+  </div>
+
 </ion-content>
