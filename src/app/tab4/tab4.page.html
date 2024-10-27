@@ -16,20 +16,20 @@
   <div class="raiz">
     <form (ngSubmit)="onSubmit()">
       <ion-item>
-        <ion-label position="stacked">Valor de a</ion-label>
+        <ion-label position="stacked">Ingresa el valor de a</ion-label>
         <ion-input type="number" [(ngModel)]="a" name="a" required></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="stacked">Valor de b</ion-label>
+        <ion-label position="stacked">ingresa el valor de b</ion-label>
         <ion-input type="number" [(ngModel)]="b" name="b" required></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="stacked">Valor de c</ion-label>
+        <ion-label position="stacked">Ingresa el valor de c</ion-label>
         <ion-input type="number" [(ngModel)]="c" name="c" required></ion-input>
       </ion-item>
-      <ion-button expand="full" type="submit">Calcular Raíces</ion-button>
+      <ion-button color="success" expand="full" type="submit">Calcular Raíces</ion-button>
     </form>
-  
+
     <div *ngIf="result" class="result">
       <h2>Resultado:</h2>
       <p>{{ result }}</p>

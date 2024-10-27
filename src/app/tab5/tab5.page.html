@@ -12,6 +12,20 @@
       <ion-title size="large">Tab 3</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-card>
+    <ion-item>
+      <ion-label position="stacked">
+        <ion-card-title>A continuación escribe el texto que deseas guardar</ion-card-title>
+      </ion-label>
+      <ion-textarea [(ngModel)]="text" placeholder="Aquí tu texto..."></ion-textarea>
+    </ion-item>
+  
+    <ion-button color="warning" expand="full" (click)="saveFile()">Guardar como Archivo de texto</ion-button>
+    
+    <div *ngIf="message" class="message">
+      <p>{{ message }}</p>
+    </div>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  </ion-card>
+  
 </ion-content>
